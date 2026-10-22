@@ -1,7 +1,10 @@
 package mx.itson.edu.examenu2_murrieta_mendez.seed
 
-import android.R
+
+import mx.itson.edu.examenu2_murrieta_mendez.R
 import mx.itson.edu.examenu2_murrieta_mendez.model.Post
+import mx.itson.edu.examenu2_murrieta_mendez.model.Usuario
+import mx.itson.edu.examenu2_murrieta_mendez.screens.post
 
 val publicaciones = listOf(
     Post(1250, R.drawable.post_1, "Un momento para recordar ✨"),
@@ -17,7 +20,6 @@ val publicaciones = listOf(
     Post(2765, R.drawable.post_11, "Entre luces y canciones ✨🎵"),
     Post(653, R.drawable.post_12, "Otro día, otra aventura 🚀"),
     Post(5230, R.drawable.post_13, "Este recuerdo merece quedarse 💫"),
-    Post(1487, R.drawable.post_14, "Mi lugar feliz 🏝️"),
     Post(987, R.drawable.post_15, "Menos prisa, más vida 🌿"),
     Post(3890, R.drawable.post_16, "La playlist de mis mejores días 🎧"),
     Post(2145, R.drawable.post_17, "Un instante, mil emociones 🖤"),
@@ -29,3 +31,23 @@ val publicaciones = listOf(
     Post(4210, R.drawable.post_23, "Que nunca falte la buena música 🎼"),
     Post(1678, R.drawable.post_24, "Y todavía quedan historias por contar ❤️")
 )
+
+val usuarioEjemplo = Usuario(
+    username = "alex.music",
+    nombreReal = "Alex | Music & Lifestyle",
+    biografia = "🎧 Música, fotos y momentos\n📍 México 🇲🇽\n✨ Creando recuerdos",
+    numeroSeguidos = 520,
+    verificado = true,
+    numeroSeguidores = 12500,
+    numeroPosts = 24,
+    imagenPerfil = R.drawable.foto_perfil
+)
+
+
+fun getPost(): Post {
+    return publicaciones.get(1)
+}
+
+fun getUsuario(): Usuario{
+    return usuarioEjemplo
+}
