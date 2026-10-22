@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun myApp(innerPadding: PaddingValues){
-    val navController = rememberWideNavigationRailState()
+    val navController = RememberNavController()
 
     navHost(navController, StartDestination = perfil){
         Composable<perfil>
